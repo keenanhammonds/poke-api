@@ -1,11 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require('../db/connection');
 
 
 const PokemonSchema = new mongoose.Schema({
     name: String,
-    sprites: [String],
-    moves: [String]
-
+    moves: [String],
+    types: [String]
 })
 
 

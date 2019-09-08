@@ -1,9 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require('../db/connection');
 
-const TypeSchema = new mongoose.Model({
+const TypeSchema = new mongoose.Schema({
     name: String,
-    sprites: [String],
-    moves: [String]
 })
 
-module.exports = mongoose.models("Types", TypeSchema)
+module.exports = mongoose.model("Types", TypeSchema)
